@@ -1,38 +1,82 @@
 # Part 1
 ### a)
+grep "beed" forest/*.1
+grep "blast" forest/*.1
+grep "bulb" forest/*.1
+grep "butt" forest/*.1
 
+grep "izard$" forest/*.2
+grep "mander$" forest/*.2
+grep "meleon$" forest/*.2
 
+grep "aur$" forest/*.3
+grep "lypuff$" forest/*.3
+grep "th$" forest/*.3
+grep "chu$" forest/*.3
 
+grep "uck$" forest/*.4
+grep "saur" forest/*.4
+grep "wart" forest/*.4
+grep "squi" forest/*.4
 
 ### b)
+grep "beed" forest/*.1 > captured/beedrill.txt
+grep "blast" forest/*.1 > captured/blastoise.txt
+grep "bulb" forest/*.1 > captured/bulbasaur.txt
+grep "butt" forest/*.1 > captured/butterfree.txt
 
+grep "izard$" forest/*.2 > captured/charizard.txt
+grep "mander$" forest/*.2 > captured/charmander.txt
+grep "meleon$" forest/*.2 > captured/charmeleon.txt
 
+grep "aur$" forest/*.3 > captured/ivysaur.txt
+grep "lypuff$" forest/*.3 > captured/jigglypuff.txt
+grep "th$" forest/*.3 > captured/meowth.txt
+grep "chu$" forest/*.3 > captured/pikachu.txt
 
+grep "uck$" forest/*.4 > captured/psyduck.txt
+grep "saur" forest/*.4 > captured/venusaur.txt
+grep "wart" forest/*.4 > captured/wartortle.txt
+grep "squi" forest/*.4 > captured/squirtle.txt
 ### c)
 
+filescan_00.1
+beedrill
+blastoise
+bulbasaur
+butterfree
 
+filescan_00.2
+charizard
+charmeleon
+charmander
 
+filescan_00.3
+ivysaur
+jigglypuff
+meowth
+pikachu
 
-
-
-
-
-
+filescan_00.4
+psyduck
+venusaur
+wartortle
+squirtle
 
 
 
 
 # Part 2
 ### a)
-
-
-
-
-
+cd captured/
+ls -R|wc -l
+OR
+grep -l "-" * | wc -l
 
 ### b)
-
-
-
+pikachu - 40 lines
+charizard - 40 lines
+beedrill - 40 lines
+find captured/ -type f -exec wc -l {} + | sort -rn
 
 
